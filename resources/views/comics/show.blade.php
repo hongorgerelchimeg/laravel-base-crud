@@ -1,13 +1,13 @@
-@extends('templates.base')
+@extends('template.base')
 
 @section('pageTitle', $pageTitle)
 
-@section('pageMain')
+@section('content')
     <div class="container">
         <div class="row g-4">
             <div class="col-8">
-                <h2>{{ $house->title }}</h2>
-                <p>{{ $house->description }}</p>
+                <h2>{{ $comic->title }}</h2>
+                <p>{{ $comic->description }}</p>
             </div>
         </div>
     </div>
