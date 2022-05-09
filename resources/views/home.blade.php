@@ -3,12 +3,6 @@
 @section('title', 'Home | DC Comics')
 @section('content')
 
-        <ul>
-            @foreach ($comics as $comic)
-            <li>
-                <a href="{{$comic['id']}}"> {{ $comic['title'] }} </a>
-            </li>
-            @endforeach
-        </ul>
+    <a href="{{ route('comics.index') }}">View Listings</a>
 
 @endsection
