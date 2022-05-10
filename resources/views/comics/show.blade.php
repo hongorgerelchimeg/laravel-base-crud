@@ -1,6 +1,6 @@
 @extends('template.base')
 
-@section('pageTitle', $pageTitle)
+@section('title', $pageTitle)
 
 @section('content')
     <div class="container">

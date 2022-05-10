@@ -1,6 +1,6 @@
 @extends('template.base')
 
-@section('pageTitle', 'Comics listing | DC Comics')
+@section('title', 'Comics listing | DC Comics')
 
 @section('content')
 
