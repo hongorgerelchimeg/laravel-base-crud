@@ -256,4 +256,12 @@ footer {
     }
 }
 
+#page-show {
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        color: var(--text-color);
+    }
+}
+
 
