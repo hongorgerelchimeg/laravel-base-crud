@@ -8,9 +8,9 @@
     </div>
     <div class="current-series">
         @foreach ($comics as $comic)
-            <a href="{{ route('comics.show', $comic->id) }}">
-                <div class="card">
 
+                <div class="card">
+                    <a href="{{ route('comics.show', $comic->id) }}">
                         {{-- <?php dd($comic) ?> --}}
                         <div class="img-holder">
                         <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">

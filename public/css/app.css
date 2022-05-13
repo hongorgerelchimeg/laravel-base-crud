@@ -225,3 +225,18 @@ footer .container .right img {
   text-transform: uppercase;
   padding: 0.5rem 0.5rem;
 }
+
+#home-page {
+  min-height: 30vh;
+  background-color: #333;
+  color: var(--text-color);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#home-page .container a {
+  font-size: 1.2rem;
+  color: var(--dc-blue);
+}
