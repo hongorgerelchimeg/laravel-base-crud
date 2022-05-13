@@ -26,7 +26,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -37,9 +37,21 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'title' => 'min:5|required',
+            'series' => 'min:5|required',
+            'thumb' => 'required|url',
+            'price' => 'required|numeric|min:0',
+            'sale_date' => 'date',
+            'type' => 'min:5|required',
+            'description' => 'min:50'
+        ]);
+       $formData = $request->all();
+       $comic = comic::create($formData);
 
+       // return redirect()->route('houses.index');
+       return redirect()->route('comics.show', compact('comic'));
+    }
     /**
      * Display the specified resource.
      *
@@ -60,9 +72,9 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $comic)
+    public function edit(comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -72,10 +84,22 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(Request $request, comic $comic)
     {
-        //
+        $request->validate([
+            'title' => 'min:5|required',
+            'series' => 'min:5|required',
+            'thumb' => 'required|url',
+            'price' => 'required|numeric|min:0',
+            'sale_date' => 'date',
+            'type' => 'min:5|required',
+            'description' => 'min:50'
+        ]);
+        $data = $request->all();
+        $comic->update($data);
+        return redirect()->route('comics.show', compact('comic'));
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -83,8 +107,9 @@ class ComicController extends Controller
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comic $comic)
+    public function destroy(comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }

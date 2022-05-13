@@ -25,6 +25,7 @@
 
     <div class="load-more-btn">
         <button>Load More</button>
+        <a href=" {{ route('comics.create')}} ">Create New Comic Listing</a>
     </div>
 
     <div class="container-sec2">
