@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  --dc-blue: #0482F9;
+  --body-background: #1C1C1C;
+  --text-color: #f1f1f1;
+  --header-text-color: #333;
+  --hover-text-color: #0482FA;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--body-background);
+  font-size: 12px;
+}
+
+header {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  color: var(--header-text-color);
+  font-weight: 500;
+  background-color: white;
+  width: 100%;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header .wrapper ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .wrapper ul li {
+  margin-right: 1.5rem;
+}
+header .wrapper ul li a {
+  color: var(--header-text-color);
+  text-decoration: none;
+}
+header .wrapper ul li a:hover {
+  color: var(--dc-blue);
+}
+header .wrapper ul .active a {
+  color: var(--hover-text-color);
+}
+header .wrapper .logo-holder {
+  max-width: 100%;
+}
+header .wrapper .logo-holder .logo {
+  width: 4rem;
+}
+header .wrapper .search-bar {
+  border-bottom: var(--dc-blue) solid 1px;
+}
+header .wrapper .search-bar #search {
+  border: none;
+}
+header .wrapper .search-bar button {
+  border: none;
+  background-color: transparent;
+}
+header .wrapper .search-bar .search-icon {
+  width: auto;
+  height: 0.8rem;
+  color: var(--header-text-color);
+}
+
+.jumbotron {
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+}
+.jumbotron img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.current-series {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.current-series .card {
+  flex-basis: calc(16.6666666667% - 0.8333333333rem);
+  max-width: calc(16.6666666667% - 0.8333333333rem);
+  margin-right: 1rem;
+}
+.current-series .card .img-holder {
+  height: 10rem;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+.current-series .card .img-holder img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+.current-series .card a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.current-series > :nth-child(6n+6) {
+  margin-right: 0;
+}
+
+.load-more-btn {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: var(--dc-blue);
+  padding: 0.4rem 2rem;
+}
+
+.container-sec2 {
+  background-color: var(--dc-blue);
+  padding: 3rem;
+}
+.container-sec2 .section2 {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.container-sec2 .section2 > :last-child img {
+  max-height: 2rem;
+}
+.container-sec2 .section2 .text-image-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container-sec2 .section2 img {
+  max-height: 3rem;
+}
+
+footer {
+  background-image: url("../images/footer-bg.jpg");
+  background-size: cover;
+  color: grey;
+  overflow: hidden;
+}
+footer .container {
+  padding: 2rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+footer .container .left {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+footer .container .left ul {
+  list-style: none;
+}
+footer .container .left ul .ul-header {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+footer .container .left ul .margin-top {
+  margin-top: 1rem;
+}
+footer .container .right {
+  height: 100%;
+  overflow: hidden;
+}
+footer .container .right img {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -40%);
+  max-width: 500px;
+}
+
+.social {
+  background-color: #333;
+  padding: 1.6rem;
+}
+.social .container {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.social .container .right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.social .container .right img {
+  max-height: 1.6rem;
+}
+.social .container .right span {
+  color: var(--dc-blue);
+  font-size: 1rem;
+}
+.social .container #social-btn {
+  border: var(--dc-blue) solid 1px;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 0.5rem 0.5rem;
+}
